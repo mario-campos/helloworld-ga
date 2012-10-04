@@ -4,7 +4,7 @@ import "math/rand"
 
 type Chromosome struct {
 	code  [13]byte // genetic code
-	score     int  // fitness score
+	score int      // fitness score
 }
 
 func (c *Chromosome) Initialize() {
@@ -41,19 +41,32 @@ func (c *Chromosome) Evaluate(i int) int {
 	var x int
 
 	switch i {
-	case 0:  x = 72  // H
-        case 1:  x = 101 // e
-        case 2:  x = 108 // l
-        case 3:  x = 108 // l
-        case 4:  x = 111 // o
-        case 5:  x = 44  // ,
-        case 6:  x = 32  // <space>
-        case 7:  x = 87  // W
-        case 8:  x = 111 // o
-        case 9:  x = 114 // r
-        case 10: x = 108 // l
-        case 11: x = 100 // d
-        case 12: x = 33  // !
+	case 0:
+		x = 72 // H
+	case 1:
+		x = 101 // e
+	case 2:
+		x = 108 // l
+	case 3:
+		x = 108 // l
+	case 4:
+		x = 111 // o
+	case 5:
+		x = 44 // ,
+	case 6:
+		x = 32 // <space>
+	case 7:
+		x = 87 // W
+	case 8:
+		x = 111 // o
+	case 9:
+		x = 114 // r
+	case 10:
+		x = 108 // l
+	case 11:
+		x = 100 // d
+	case 12:
+		x = 33 // !
 	}
 
 	eval_val := x - int(c.code[i])

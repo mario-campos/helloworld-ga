@@ -2,7 +2,7 @@ package hwga
 
 import "math/rand"
 
-type Population []*Chromosome;
+type Population []*Chromosome
 
 func (p Population) Populate() {
 	for i := range p {
@@ -12,22 +12,22 @@ func (p Population) Populate() {
 }
 
 func (p Population) Crossover() Population {
-	var h,j int
+	var h, j int
 	np := make(Population, len(p))
 	np.Populate()
 
 	for i := range p {
 		if i == 0 {
-			h = len(p)-1
+			h = len(p) - 1
 			j = 1
 		} else if i == len(p)-1 {
-			h = i-1
+			h = i - 1
 			j = 0
 		} else {
-			h = i-1
-			j = i+1
+			h = i - 1
+			j = i + 1
 		}
-				
+
 		if p[h].score > p[j].score {
 			np[i] = p[i].Mate(p[j])
 		} else {
@@ -74,5 +74,5 @@ func (p Population) IsSolved() bool {
 		}
 	}
 
-	return retval	
+	return retval
 }
