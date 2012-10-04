@@ -1,0 +1,11 @@
+# Emacs files
+*~
+\#*\#
+
+# Compiled
+*.a
+*.out
+
+# Default Go Directories
+pkg/
+bin/
