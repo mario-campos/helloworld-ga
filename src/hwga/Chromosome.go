@@ -9,28 +9,28 @@ package hwga
 import "math/rand"
 
 // A Chromosome, the building block of a GA, stores a genetic 
-// code (string) and its fitness/cost.
+// Code (string) and its fitness/cost.
 type Chromosome struct {
-	code  [13]byte
-	score int
+	Code  [13]byte
+	Score int
 }
 
 // Initialize assigns a random string to the Chromosome.
 func (c *Chromosome) Initialize() {
-	for i := range c.code {
-		c.code[i] = byte(rand.Intn(90) + 32)
+	for i := range c.Code {
+		c.Code[i] = byte(rand.Intn(90) + 32)
 	}
 
 	c.CalculateCost()
 }
 
 // CalculateCost performs the cost/fitness of the Chromosome's string
-// and stores the result in Chromosome.score.
+// and stores the result in Chromosome.Score.
 func (c *Chromosome) CalculateCost() {
-	c.score = 0
+	c.Score = 0
 
-	for i := range c.code {
-		c.score += c.Evaluate(i)
+	for i := range c.Code {
+		c.Score += c.Evaluate(i)
 	}
 }
 
@@ -41,9 +41,9 @@ func (a *Chromosome) Mate(b *Chromosome) *Chromosome {
 
 	for i := 0; i < 13; i++ {
 		if a.Evaluate(i) < b.Evaluate(i) {
-			c.code[i] = a.code[i]
+			c.Code[i] = a.Code[i]
 		} else {
-			c.code[i] = b.code[i]
+			c.Code[i] = b.Code[i]
 		}
 	}
 
@@ -84,7 +84,7 @@ func (c *Chromosome) Evaluate(i int) int {
 		x = 33 // !
 	}
 
-	eval_val := x - int(c.code[i])
+	eval_val := x - int(c.Code[i])
 
 	if eval_val < 0 {
 		eval_val = -eval_val

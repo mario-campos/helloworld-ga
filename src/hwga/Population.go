@@ -36,7 +36,7 @@ func (p Population) Crossover() Population {
 			j = i + 1
 		}
 
-		if p[h].score > p[j].score {
+		if p[h].Score > p[j].Score {
 			np[i] = p[i].Mate(p[j])
 		} else {
 			np[i] = p[i].Mate(p[h])
@@ -54,7 +54,7 @@ func (p Population) Mutate() {
 	for i := range p {
 		pos := rand.Intn(13)
 		val := byte(rand.Intn(90) + 32)
-		p[i].code[pos] = val
+		p[i].Code[pos] = val
 	}
 }
 
@@ -70,7 +70,7 @@ func (p Population) Best() *Chromosome {
 	var c *Chromosome = p[0]
 
 	for i := range p {
-		if p[i].score < c.score {
+		if p[i].Score < c.Score {
 			c = p[i]
 		}
 	}
@@ -83,7 +83,7 @@ func (p Population) IsSolved() bool {
 	var retval bool = false
 
 	for i := range p {
-		if p[i].score == 0 {
+		if p[i].Score == 0 {
 			retval = true
 			break
 		}
