@@ -6,8 +6,10 @@ package hwga
 
 import "math/rand"
 
+// A Population is a slice (array) of Chromosome pointers.
 type Population []*Chromosome
 
+// Populate assigns a new Initialized Chromosome to each element.
 func (p Population) Populate() {
 	for i := range p {
 		p[i] = new(Chromosome)
@@ -15,6 +17,8 @@ func (p Population) Populate() {
 	}
 }
 
+// Crossover Mates each Chromosome with its most-optimal neighbor and
+// returns a new Population of the offspring Chromosomes.
 func (p Population) Crossover() Population {
 	var h, j int
 	np := make(Population, len(p))
@@ -44,6 +48,8 @@ func (p Population) Crossover() Population {
 	return np
 }
 
+// Mutate assigns a random ASCII character to a random index of each 
+// Chromosome's genetic string.
 func (p Population) Mutate() {
 	for i := range p {
 		pos := rand.Intn(13)
@@ -52,12 +58,14 @@ func (p Population) Mutate() {
 	}
 }
 
+// Cost performs the cost/fitness function on each Chromosome.
 func (p Population) Cost() {
 	for i := range p {
 		p[i].CalculateCost()
 	}
 }
 
+// Best returns a pointer to the most-optimal Chromosome in the Population.
 func (p Population) Best() *Chromosome {
 	var c *Chromosome = p[0]
 
@@ -70,6 +78,7 @@ func (p Population) Best() *Chromosome {
 	return c
 }
 
+// IsSolved determines whether or not the Population contains an ideal Chromosome.
 func (p Population) IsSolved() bool {
 	var retval bool = false
 

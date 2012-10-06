@@ -2,15 +2,20 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+// Package hwga provides a Genetic Algorithm to resolve random strings 
+// to 'Hello, World!'.
 package hwga
 
 import "math/rand"
 
+// A Chromosome, the building block of a GA, stores a genetic 
+// code (string) and its fitness/cost.
 type Chromosome struct {
-	code  [13]byte // genetic code
-	score int      // fitness score
+	code  [13]byte
+	score int
 }
 
+// Initialize assigns a random string to the Chromosome.
 func (c *Chromosome) Initialize() {
 	for i := range c.code {
 		c.code[i] = byte(rand.Intn(90) + 32)
@@ -19,6 +24,8 @@ func (c *Chromosome) Initialize() {
 	c.CalculateCost()
 }
 
+// CalculateCost performs the cost/fitness of the Chromosome's string
+// and stores the result in Chromosome.score.
 func (c *Chromosome) CalculateCost() {
 	c.score = 0
 
@@ -27,6 +34,8 @@ func (c *Chromosome) CalculateCost() {
 	}
 }
 
+// Mate, given a pointer to a Chromosome, optimally merges the two 
+// Chromosomes and returns a pointer to the offspring Chromosome.
 func (a *Chromosome) Mate(b *Chromosome) *Chromosome {
 	c := new(Chromosome)
 
@@ -41,6 +50,8 @@ func (a *Chromosome) Mate(b *Chromosome) *Chromosome {
 	return c
 }
 
+// Evaluate, given an index, returns an absolute numerical difference
+// of the indexed ASCII character and the ideal ASCII character.
 func (c *Chromosome) Evaluate(i int) int {
 	var x int
 
