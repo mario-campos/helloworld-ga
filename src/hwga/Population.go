@@ -37,6 +37,8 @@ func (p Population) Crossover() Population {
 		} else {
 			np[i] = p[i].Mate(p[h])
 		}
+
+		np[i].CalculateCost()
 	}
 
 	return np
