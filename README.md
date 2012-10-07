@@ -39,9 +39,14 @@ Altering the frequency of Mutation adjusts the algorithm's ability to converge t
 
 The importantance of Mutation is to introduce new variety, ultimately to continue evolution when Crossover can't.This is more likely to happen in a smaller population as there is less chance for variety than in a larger population. Therefore, Mutation plays a larger role in smaller populations, since Crossover will likely result in inbreeding.
 
+### Documentation
+
+[Documentation][3]
+
 ### License
 
 *helloworld-ga* is licensed with [Mozilla Public License 2.0][2].
 
 [1]:http://en.wikipedia.org/w/index.php?title=Genetic_algorithm&oldid=516133477
 [2]:http://www.mozilla.org/MPL/2.0/
+[3]:http://go.pkgdoc.org/github.com/iamrekcah/helloworld-ga/src/hwga
