@@ -43,6 +43,10 @@ The importantance of Mutation is to introduce new variety, ultimately to continu
 
 [Documentation][3]
 
+### References
+
+Burak Kanber's [Machine Learning: Genetic Algorithms Tutorial][4]
+
 ### License
 
 *helloworld-ga* is licensed with [Mozilla Public License 2.0][2].
@@ -50,3 +54,4 @@ The importantance of Mutation is to introduce new variety, ultimately to continu
 [1]:http://en.wikipedia.org/w/index.php?title=Genetic_algorithm&oldid=516133477
 [2]:http://www.mozilla.org/MPL/2.0/
 [3]:http://go.pkgdoc.org/github.com/iamrekcah/helloworld-ga/src/hwga
+[4]:http://burakkanber.com/blog/machine-learning-genetic-algorithms-part-1-javascript/
