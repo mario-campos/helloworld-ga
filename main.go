@@ -5,9 +5,10 @@ package main
 
 import (
 	"fmt"
-	"hwga"
 	"time"
 	"math/rand"
+
+	hwga "github.com/mario-campos/helloworld-ga/hwga"
 )
 
 func main() {
