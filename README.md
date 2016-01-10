@@ -1,4 +1,4 @@
-# helloworld-ga
+# helloworld-ga [![Build Status](https://travis-ci.org/mario-campos/helloworld-ga.svg)](https://travis-ci.org/mario-campos/helloworld-ga)
 
 A simple "Hello, World!" program, using a genetic algorithm.
 
