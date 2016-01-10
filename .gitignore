@@ -5,6 +5,7 @@
 # Compiled
 *.a
 *.out
+helloworld-ga
 
 # Default Go Directories
 pkg/
