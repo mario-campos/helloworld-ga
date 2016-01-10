@@ -1,0 +1,6 @@
+sudo: false
+language: go
+go: tip
+script:
+  - go build
+  - go test -v github.com/mario-campos/helloworld-ga/hwga
