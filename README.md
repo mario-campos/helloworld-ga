@@ -51,6 +51,64 @@ Burak Kanber's [Machine Learning: Genetic Algorithms Tutorial][4]
 
 *helloworld-ga* is licensed with [Mozilla Public License 2.0][2].
 
+### INSTALL
+
+```
+go get github.com/mario-campos/helloworld-ga
+```
+
+### USE
+
+```
+$GOPATH/bin/helloworld-ga
+[ 1 ]   Ilvqw/%hix\g'   (93)
+[ 2 ]   Pfmcv20Ooqlo!   (68)
+[ 3 ]   Egktm, UpslP!   (40)
+[ 4 ]   Egktm, WpslP!   (38)
+[ 5 ]   Hhlhi-!Xogif    (33)
+[ 6 ]   Felmm.$Qlqlc#   (24)
+[ 7 ]   Felmq+$Qlqlc#   (23)
+[ 8 ]   Gdomp+$Ynsk_!   (22)
+[ 9 ]   Gfhkq) Wkrnd    (19)
+[ 10 ]  Egkim, Wpslh    (18)
+[ 11 ]  Eglqm, Wpslf!   (16)
+[ 12 ]  Demln*"Woqld!   (11)
+[ 13 ]  Hglln- Uosld#   (9)
+[ 14 ]  Hgmln+ Uoqld#   (10)
+[ 15 ]  Ehlmp, Woslc!   (10)
+[ 16 ]  Hdllp+ Xoskf!   (8)
+[ 17 ]  Igmlp. Znskc!   (14)
+[ 18 ]  Hdmlp- Xpskc!   (9)
+[ 19 ]  Ielmn+ Worjb!   (8)
+[ 20 ]  Jejmn, World#   (8)
+[ 21 ]  Hdlln- Vorjd"   (7)
+[ 22 ]  Hdlmo. Uormd!   (7)
+[ 23 ]  Hdmlp+ Xoslc!   (7)
+[ 24 ]  Hdllp, Xoskd!   (5)
+[ 25 ]  Ifllo, Voqnd!   (6)
+[ 26 ]  Gello- Xoqmd!   (5)
+[ 27 ]  Eelmp- Wosld!   (7)
+[ 28 ]  Gfllo, Xoqnd!   (6)
+[ 29 ]  Hello,!Xormd!   (3)
+[ 30 ]  Heilp,!World!   (5)
+[ 31 ]  Helmo-!Woskd    (6)
+[ 32 ]  Hello- Workd"   (3)
+[ 33 ]  Eello, Wosld!   (4)
+[ 34 ]  Hcllo, Workd"   (4)
+[ 35 ]  Hellp, World!   (1)
+[ 36 ]  Helmo.!Wormd!   (5)
+[ 37 ]  Hekln, Workd!   (3)
+[ 38 ]  Hdlmo, Wormd!   (3)
+[ 39 ]  Hellp, Vorld!   (2)
+[ 40 ]  Hellp, World!   (1)
+[ 41 ]  Hellp, World!   (1)
+[ 42 ]  Hfllo, World!   (1)
+[ 43 ]  Hello, Xorld!   (1)
+[ 44 ]  Helmo, World!   (1)
+[ 45 ]  Hello, Vprld!   (2)
+[ 46 ]  Hello, World!   (0)
+```
+
 [1]:http://en.wikipedia.org/w/index.php?title=Genetic_algorithm&oldid=516133477
 [2]:http://www.mozilla.org/MPL/2.0/
 [3]:http://go.pkgdoc.org/github.com/iamrekcah/helloworld-ga/src/hwga
